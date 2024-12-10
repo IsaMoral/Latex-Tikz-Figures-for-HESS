@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+	% Paths, nodes and wires:
+	\draw (0, 2) to[american voltage source, l_={$v_g$}, label distance=0.02cm] (0, -0);
+	\draw (0, 2) to[american inductor, l={$L_1$}, label distance=0.02cm] (2, 2);
+	\draw (7.8, 2) to[american resistor, l={$R_{o}$}, label distance=0.02cm] (7.8, -0);
+	\draw node[Lnigbt, bodydiode] at (2, 1) {};
+	\draw[draw] (2, 1.77) -| (2, 2);
+	\draw node[vcc] (N1) at (1.16, 0.692) {} node[anchor=south] at ([yshift=-0.12cm]N1.north){$d$};
+	\draw[draw] (2, 0.23) -| (2, -0);
+	\draw (2, 2) to[curved capacitor] (4, 2);
+	\draw (6, 2) to[curved capacitor, l={$C_2$}, label distance=0.02cm] (6, -0);
+	\draw (4, 2) to[american inductor, l={$L_2$}, label distance=0.02cm] (4, 0);
+	\draw (4, 2) to[empty diode] (6, 2);
+	\draw[draw] (6, 2) -- (7.8, 2);
+\end{tikzpicture}
