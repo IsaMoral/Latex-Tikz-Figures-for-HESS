@@ -1,0 +1,31 @@
+\begin{tikzpicture}
+	% Paths, nodes and wires:
+	\draw (4.77, 6.892) to[sdcdc, l={$DC/DC \ \ BAT$},/tikz/circuitikz/bipoles/length=2.8cm] (6.77, 6.892);
+	\draw (13, 7.5) to[american current source, l={$i_{LOAD}$}, label distance=0.02cm] (13, 4.5);
+	\draw (4.77, 3.892) to[sdcdc, l={$DC/DC \ \ UC$},/tikz/circuitikz/bipoles/length=2.8cm] (6.77, 3.892);
+	\draw (2.75, 4.186) -| (2.75, 4.5) -- (4.79, 4.5) |- (2.75, 3) -| (2.75, 3.5);
+	\draw (4.75, 0.765) to[sdcdc, l={$DC/DC  \ \ FC$},/tikz/circuitikz/bipoles/length=2.8cm] (6.75, 0.765);
+	\draw (2.75, 4.186) to[curved capacitor, l_={$UC$}, label distance=0.02cm] (2.75, 3.186);
+	\draw (2.75, 7.5) to[battery, l_={$BAT$}, label distance=0.02cm] (2.75, 6);
+	\draw (2.75, 7.5) -- (4.75, 7.5) -- (2.75, 7.5);
+	\draw (2.75, 6) -- (4.75, 6) -- (2.75, 6);
+	\draw node[double bipole, circuitikz/quadpoles style=inline, xscale=0.7, yscale=-0.7] (N1) at (2.706, 0.765) {} node[anchor=east] at ([xshift=-0.41cm]N1.text){$FC$};
+	\draw (3, 1.25) |- (3, 1.5) -| (4.75, 1.5);
+	\draw (3, 0.25) |- (3, -0) -| (4.75, -0.25) -- (4.75, -0.25) -- (4.75, -0.25);
+	\draw node[vcc] (N2) at (11, 7.5) {} node[anchor=south] at (N2.north){$DC_{BUS}$};
+	\draw (11, 7.5) to[ecapacitor, l={$C$}] (11, 4.5);
+	\draw (13, 4.5) -- (11, 4.5);
+	\draw node[ground] at (7.25, 6.5) {};
+\draw (6.75, 6.5) -- (7.25, 6.5);
+	\draw node[ground] at (7.25, 3.5) {};
+\draw (6.75, 3.5) -- (7.25, 3.5);
+	\draw node[ground] at (7.25, 0.25) {};
+\draw (6.75, 0.25) -- (7.25, 0.25);
+	\draw node[ground] at (13, 4.5) {};
+\draw (12.5, 4.5) -- (13, 4.5);
+	\draw (6.75, 4.5) -- (8, 4.5) -- (8, 7.5);
+	\draw (6.75, 1.25) -- (8, 1.25) -| (8, 4.5);
+	\draw (8.75, 7.5) to[short,i={$i_{MPC}$}] (9.75, 7.5);
+	\draw (6.75, 7.5) -- (8.75, 7.5);
+	\draw (9.75, 7.5) -- (13, 7.5);
+\end{tikzpicture}

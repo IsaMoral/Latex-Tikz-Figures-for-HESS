@@ -1,0 +1,7 @@
+\begin{tikzpicture}
+	% Paths, nodes and wires:
+	\draw (2, 5) to[american current source, l={$i_{MPC}$}, label distance=0.1cm] (5, 5);
+	\draw (5, 5) to[american current source, l={$i_{LOAD}$}, label distance=0.1cm] (8, 5);
+	\draw (5, 5) to[capacitor, l={$C_{bus}$}, label distance=0.02cm] (5, 2.4);
+	\draw node[ground] at (5, 2.4) {};
+\end{tikzpicture}
